@@ -4,4 +4,5 @@ venv/
 data/*.csv
 models/*.joblib
 reports/metricas.json
+reports/train_log.txt
 reports/figures/*.png
