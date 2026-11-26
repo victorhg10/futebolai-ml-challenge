@@ -3,6 +3,9 @@
 ## Problema
 Estimar o resultado de uma partida da Premier League: vitória do time mandante (H), empate (D) ou vitória do visitante (A), utilizando nomes dos times e odds pré-jogo.
 
+## Interface
+![Interface do FutebolAI](docs/app_screenshot.png)
+
 ## Dataset público
 Dados históricos da Premier League disponibilizados por Football-Data.co.uk:
 https://www.football-data.co.uk/englandm.php
@@ -35,6 +38,7 @@ py -m venv .venv
 ├── app.py              # aplicação Streamlit
 ├── train.py            # download, análise, treino e avaliação
 ├── requirements.txt    # dependências com versões fixas
+├── docs/               # screenshot usado neste README
 ├── data/               # CSVs baixados (gerados, não versionados)
 ├── models/             # modelo treinado (gerado, não versionado)
 ├── reports/            # métricas, log e gráficos (gerados, não versionados)
