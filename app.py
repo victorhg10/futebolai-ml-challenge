@@ -16,7 +16,8 @@ if not MODEL_PATH.exists():
     st.stop()
 
 model = joblib.load(MODEL_PATH)
-teams = ["Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton", "Chelsea", "Crystal Palace", "Everton", "Fulham", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Nottingham Forest", "Tottenham", "West Ham", "Wolves", "Leicester", "Southampton", "Ipswich"]
+encoder = model.named_steps["preprocessamento"].named_transformers_["times"].named_steps["onehot"]
+teams = sorted(set(encoder.categories_[0]) | set(encoder.categories_[1]))
 home = st.selectbox("Time mandante", teams)
 away_options = [t for t in teams if t != home]
 away = st.selectbox("Time visitante", away_options)
