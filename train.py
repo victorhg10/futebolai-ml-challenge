@@ -38,7 +38,7 @@ def load_data():
                 print(f"Não foi possível baixar {season}: {exc}")
                 continue
         try:
-            frame = pd.read_csv(path, encoding="latin1")
+            frame = pd.read_csv(path, encoding="latin1").copy()
             frame["Temporada"] = season
             frames.append(frame)
         except Exception as exc:
